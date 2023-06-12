@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const ContactBlock = styled.div`
     background: skyblue;
-    height: 100vw;
+    height: 100%;
 `
 
 const Contact = () => {

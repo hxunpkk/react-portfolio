@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const ProjectBlock = styled.div`
     background:pink;
-    height: 100vw;
+    height: 100%;
 `
 
 const Project = () => {
