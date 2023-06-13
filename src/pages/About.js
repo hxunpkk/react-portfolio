@@ -132,7 +132,7 @@ const About = () => {
                 <div className="d_left">
                     <div className="info">
                         <div className="pics">
-                            <img src='pics/face.jpg' />
+                            <img src='pics/face.jpg' alt="face"/>
                         </div>
                         <div className="name">
                             <p>박현우</p>
