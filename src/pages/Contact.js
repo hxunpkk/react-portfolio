@@ -9,7 +9,8 @@ const ContactBlock = styled.div`
 const Contact = () => {
     return (
         <ContactBlock>
-            안녕
+            Contact Me
+            github, velog, email, phone
         </ContactBlock>
     );
 };

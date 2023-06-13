@@ -28,6 +28,7 @@ const AboutBlock = styled.div`
             padding-bottom: 5px;
             @media ${props=>props.theme.tabletS}{
                 font-size: 16px;
+                margin: 6px 0;
             }
         }
 
