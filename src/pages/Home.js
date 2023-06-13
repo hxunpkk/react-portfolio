@@ -8,6 +8,7 @@ import Contact from './Contact';
 import "aos/dist/aos.css";
 
 const HomeSectionBlock = styled.div`
+  font-family: 'NEXON Lv2 Gothic';
   .slide-navigation {
     display: none;
   }

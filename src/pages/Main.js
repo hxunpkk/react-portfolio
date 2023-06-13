@@ -10,7 +10,6 @@ const MainBlock = styled.div`
     background: black;
     height: 100%;
     color: white;
-    font-family: 'NEXON Lv2 Gothic';
     text-align: center;
     div {
         position: absolute;
@@ -86,7 +85,7 @@ const Main = () => {
 
     useEffect(()=>{
         Aos.init({
-            duration:1000
+            duration:500
         })
 
         const interval = setInterval(()=>{
