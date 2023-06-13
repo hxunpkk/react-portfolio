@@ -1,5 +1,5 @@
 const theme = {
-    mobile : '(max-width:768px)',
+    mobile : '(max-width:767px)',
     tabletS : '(max-width:1024px)',
     tabletM : '(max-width:1220px)',
     tabletL : '(max-width:1280px)',

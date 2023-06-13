@@ -19,13 +19,27 @@ const MainBlock = styled.div`
         margin: 0;
         h1 {
             font-size: 60px;
+            @media ${props=>props.theme.tabletS}{
+                font-size: 32px;
+            }
+            &::after{
+                border-right: 3px solid yellow;
+                content: '';
+                animation: typing 0.7s linear infinite;
+            }
         }
         p {
             font-weight: bold;
             font-size: 36px;
+            @media ${props=>props.theme.tabletS}{
+                font-size: 16px;
+            }
             span {
                 position: relative;
                 font-size: 60px;
+                @media ${props=>props.theme.tabletS}{
+                    font-size: 32px;
+                }
                 &:after{
                     content: "";
                     position: absolute;
@@ -44,14 +58,15 @@ const MainBlock = styled.div`
     }
 
     .mouse {
-        font-size: 25px;
         position: absolute;
         bottom: 5%;
         left: 50%;
         transform: translate(-50%, 0);
+        font-size: 25px;
         animation: bounce 0.5s linear infinite;
     }
 
+    
     @keyframes lineFade {
         0% {
           width: 0%;
@@ -66,7 +81,7 @@ const MainBlock = styled.div`
 
     @keyframes bounce {
         0% {
-            transfrom: translateY(-100%;)
+            transfrom: translateY(-100%);
         }
         50% {
             transform: translateY(20%);
@@ -76,6 +91,17 @@ const MainBlock = styled.div`
         }
     }
     
+    @keyframes typing {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0.5;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 `
 
 const Main = () => {
@@ -85,7 +111,12 @@ const Main = () => {
 
     useEffect(()=>{
         Aos.init({
-            duration:500
+            duration:500,
+            once: true,
+            // disable: function() {
+            //     var maxWidth = 768;
+            //     return window.innerWidth < maxWidth;
+            //   }
         })
 
         const interval = setInterval(()=>{
@@ -102,10 +133,10 @@ const Main = () => {
         <MainBlock>
             <div>
                 <h1>{text}</h1>
-                <p data-aos="fade-up" data-aos-delay="1600" data-aos-duration="600">언제나 배우고 성장하는</p>
-                <p data-aos="fade-up" data-aos-delay="2200" data-aos-duration="600"><span>박현우</span>입니다.</p>
+                <p data-aos="fade-up" data-aos-delay="1600" data-aos-duration="600" data-aos-once="false">언제나 배우고 성장하는</p>
+                <p data-aos="fade-up" data-aos-delay="2200" data-aos-duration="600" data-aos-once="false"><span>박현우</span>입니다.</p>
             </div>
-            <FontAwesomeIcon data-aos="fade" data-aos-delay="3000" icon="fa-computer-mouse" data-aos-duration="600" className="mouse"/>
+            <FontAwesomeIcon data-aos="fade" data-aos-delay="3000" data-aos-duration="600" icon="fa-computer-mouse" className="mouse"/>
         </MainBlock>
     );
 };

@@ -6,11 +6,13 @@ import theme from './theme'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AnimatedCursor from './animatedcursor';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ThemeProvider theme={theme}>
     <BrowserRouter>
+      <AnimatedCursor />
       <App />
     </BrowserRouter>
   </ThemeProvider>
