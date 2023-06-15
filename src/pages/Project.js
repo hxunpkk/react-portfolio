@@ -79,7 +79,7 @@ const ProjectBlock = styled.div`
 `
 
 const Project = () => {
-    const {count, setCount} = useContext(AirContext)
+    const {count} = useContext(AirContext)
     const [files, setFiles] = useState({
         url: '',
         title: '',
