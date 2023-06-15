@@ -5,6 +5,7 @@ import Main from './Main';
 import About from './About';
 import Project from './Project';
 import Contact from './Contact';
+import Skills from './Skills';
 import "aos/dist/aos.css";
 
 const HomeSectionBlock = styled.div`
@@ -55,6 +56,9 @@ const Home = () => {
                 </Slide>
                 <Slide>
                     <About />
+                </Slide>
+                <Slide>
+                    <Skills />
                 </Slide>
                 <Slide>
                     <Project />

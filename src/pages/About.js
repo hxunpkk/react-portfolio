@@ -1,19 +1,22 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
+import Aos from 'aos';
 
 const AboutBlock = styled.div`
-    background: black;
+    background: #111;
     height: 100%;
     display: flex;
     .article {
         flex: 1;
-        background: white;
+        background: #31313C;
         justify-content: center;
         align-items: center;
         padding: 60px;
-        border-radius: 5px;
+        border-radius: 5px 0 5px 0;
         display: flex;
         margin: auto 60px;
+        color: white;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
         @media ${props=>props.theme.mobile}{
             flex-direction: column;
             padding: 0 10px;
@@ -23,9 +26,10 @@ const AboutBlock = styled.div`
         h2 {
             font-size: 25px;
             font-weight: lighter;
-            color: #282828;
+            color: lightgrey;
             border-bottom: 1px solid #ebebeb;
             padding-bottom: 5px;
+            font-family: Montserrat;
             @media ${props=>props.theme.tabletS}{
                 font-size: 16px;
                 margin: 6px 0;
@@ -84,6 +88,7 @@ const AboutBlock = styled.div`
                     img {
                         width: 100%;
                         height: 100%;
+                        overflow: hidden;
                     }
                 }
                 .name {
@@ -127,10 +132,21 @@ const AboutBlock = styled.div`
 `
 
 const About = () => {
+    useEffect(()=>{
+        Aos.init({
+            duration:500,
+            once: true,
+            // disable: function() {
+            //     var maxWidth = 768;
+            //     return window.innerWidth < maxWidth;
+            //   }
+        })
+    })
+
     return (
         <AboutBlock>
-            <div className="article">
-                <div className="d_left">
+            <div className="article" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="false">
+                <div className="d_left" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="600" data-aos-once="false">
                     <div className="info">
                         <div className="pics">
                             <img src='pics/face.jpg' alt="face"/>
@@ -159,7 +175,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div className="d_right">
+                <div className="d_right" data-aos="fade-up" data-aos-delay="1600" data-aos-duration="600" data-aos-once="false">
                     <div className="education">
                         <h2>Education</h2>
                         <div className='list_text'>

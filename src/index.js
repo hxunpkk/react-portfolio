@@ -11,9 +11,9 @@ import AnimatedCursor from './animatedcursor';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ThemeProvider theme={theme}>
-    <BrowserRouter>
-      <AnimatedCursor />
+    <BrowserRouter>   
       <App />
+      <AnimatedCursor /> 
     </BrowserRouter>
   </ThemeProvider>
 );

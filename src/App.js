@@ -5,15 +5,17 @@ import Home from './pages/Home';
 import { AirContext } from './context/AirContext'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons';
 
 
-library.add(fas)
+
+library.add(fas, fab)
 
 function App() {
-  const [active, setActive] = useState(0)
+  const [count, setCount] = useState(0)
 
   return (
-    <AirContext.Provider value={{active, setActive}}>
+    <AirContext.Provider value={{count, setCount}}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
