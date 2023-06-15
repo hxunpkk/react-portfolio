@@ -147,7 +147,7 @@ const Project = () => {
                             </div>
                             <div>
                                 <p className='info_subtitle'>Links</p>
-                                <a href={files.link} target="_blank"><FontAwesomeIcon icon="fa-brands fa-github" /></a>
+                                <a href={files.link} target="_blank" rel="noreferrer"><FontAwesomeIcon icon="fa-brands fa-github" /></a>
                             </div>
                             <div>
                                 <p className='info_subtitle'>Made with</p>
