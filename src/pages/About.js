@@ -136,10 +136,6 @@ const About = () => {
         Aos.init({
             duration:500,
             once: true,
-            // disable: function() {
-            //     var maxWidth = 768;
-            //     return window.innerWidth < maxWidth;
-            //   }
         })
     })
 

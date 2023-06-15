@@ -4,6 +4,7 @@ import Arrowleft from '../components/Arrowleft';
 import Arrowright from '../components/Arrowright';
 import { AirContext } from '../context/AirContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import HoverVideoPlayer from 'react-hover-video-player';
 
 const ProjectBlock = styled.div`
     background: #111;
@@ -53,10 +54,6 @@ const ProjectBlock = styled.div`
                 width: 100%;
                 height: 50%;
             }
-            img {
-                width: 70%;
-                height: 100%;
-            }
             .img_box {
                 margin: 50px auto;
             }
@@ -99,7 +96,8 @@ const Project = () => {
                     author: '개인 프로젝트',
                     link: 'https://github.com/hxunpkk/portfolio1',
                     stacks: 'HTML / CSS / JS',
-                    desc: ''
+                    desc: '',
+                    vlink: 'videos/video1.mp4',
                 })
                 break;
             case 1:
@@ -109,7 +107,8 @@ const Project = () => {
                     author: '팀 프로젝트',
                     link: 'https://github.com/hxunpkk/teamproject_boksabon',
                     stacks: 'HTML / CSS / JS / JQuery',
-                    desc: ''
+                    desc: '',
+                    vlink: 'videos/video2.mp4',
                 })
                 break;
             case 2:
@@ -119,7 +118,8 @@ const Project = () => {
                     author: '개인 프로젝트',
                     link: 'https://github.com/hxunpkk/Jhin.gg',
                     stacks: 'Vue / Vuetify / Firebase',
-                    desc: ''
+                    desc: '',
+                    vlink: 'videos/video3.mp4',
                 })
                 break;
             default:
@@ -135,7 +135,21 @@ const Project = () => {
                 </div>
                 <div className='board_c'>
                     <div className='img_box'>
-                        <img src={files.url} alt="banner"/>
+                        <HoverVideoPlayer 
+                            videoSrc={files.vlink}
+                            restartOnPaused
+                            loadingStateTimeout = { 1000 } 
+                            pausedOverlay={
+                              <img
+                                src={files.url}
+                                alt="banner"
+                                style={{
+                                  width: '100%',
+                                  height: '100%',
+                                  objectFit: 'cover',
+                                }}
+                                />}
+                         />
                     </div>
                     <div className='info_box'>
                         <p className='info_subtitle'>Project Title</p>
