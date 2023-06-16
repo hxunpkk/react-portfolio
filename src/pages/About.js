@@ -96,6 +96,7 @@ const AboutBlock = styled.div`
                     width: 70%;
                     height: 100%;
                     font-size: 22px;
+                    font-family: Jua;
                     font-weight: lighter;
                     @media ${props=>props.theme.tabletS}{
                         padding: 0;

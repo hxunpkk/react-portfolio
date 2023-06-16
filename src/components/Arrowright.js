@@ -26,6 +26,9 @@ const ArrowRightBlock = styled.div`
           &:hover span {
             opacity: 1;
             transition: opacity 0.3s 0.1s;
+            @media ${props=>props.theme.mobile}{
+              opacity: 0;
+            }
           }
           &:before {
             content: '';
@@ -48,6 +51,10 @@ const ArrowRightBlock = styled.div`
           &.arrow--right:hover:before {
             left: 100%;
             transition: left 0.3s;
+            @media ${props=>props.theme.mobile}{
+              left: 0;
+              transition: 0;
+            }
           }
           &:hover {
             transform: none;

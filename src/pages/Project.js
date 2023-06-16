@@ -18,8 +18,9 @@ const ProjectBlock = styled.div`
         align-items: center;
         margin: auto 20vw;
         color: white;
-        border-radius: 5px 0 5px 0;
+        border-radius: 0 5px 0 5px;
         box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        position: relative;
         @media ${props=>props.theme.mobile}{
             padding: 0 10px;
             margin: auto;
@@ -42,10 +43,13 @@ const ProjectBlock = styled.div`
             flex-direction: column;
             text-align: center;
             padding: 60px;
+            font-family: Jua;
+            letter-spacing: 3px;
             @media ${props=>props.theme.tabletL}{
                 width: 70%;
             } 
             .info_subtitle {
+                letter-spacing: 0;
                 font-size: 14px;
                 font-family: Righteous;
                 color: lightgrey;
@@ -56,9 +60,15 @@ const ProjectBlock = styled.div`
             }
             .img_box {
                 margin: 50px auto;
+                &:hover .hover_text {
+                    opacity: 0;
+                }
             }
             .info_box {
                 text-align: left;
+                h2 {
+                    font-weight: normal;
+                }
                 .depth2 {
                     display: flex;
                     div {
@@ -68,11 +78,31 @@ const ProjectBlock = styled.div`
                 }
                 transition: all 1s;
             }
+            .hover_text {
+                font-size: 16px;
+                position: absolute;
+                top: 0;
+                right: 100%;
+                writing-mode: vertical-lr;
+                background: #FF4438;
+                width: 50px;
+                height: 250px;
+                text-align: center;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                border-radius: 7px 0 0 7px;
+                transition: all 0.5s;
+                @media ${props=>props.theme.tabletS}{
+                    display: none;
+                } 
+            }
         }
         a {
             color: #fff;
         }
     }
+
 `
 
 const Project = () => {
@@ -135,6 +165,7 @@ const Project = () => {
                 </div>
                 <div className='board_c'>
                     <div className='img_box'>
+                        <div className='hover_text'>사진에 커서를 올려보세요</div>
                         <HoverVideoPlayer 
                             videoSrc={files.vlink}
                             restartOnPaused

@@ -6,7 +6,7 @@ import theme from './theme'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import AnimatedCursor from './animatedcursor';
+import AnimatedCursor from './components/animatedcursor';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
