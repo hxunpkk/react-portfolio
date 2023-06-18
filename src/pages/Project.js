@@ -59,7 +59,7 @@ const ProjectBlock = styled.div`
                 height: 50%;
             }
             .img_box {
-                margin: 50px auto;
+                margin: 20px auto;
                 &:hover .hover_text {
                     opacity: 0;
                 }
@@ -126,29 +126,29 @@ const Project = () => {
                     author: '개인 프로젝트',
                     link: 'https://github.com/hxunpkk/portfolio1',
                     stacks: 'HTML / CSS / JS',
-                    desc: '',
+                    desc: '반응형 디자인 웹 페이지 사이트',
                     vlink: 'videos/video1.mp4',
                 })
                 break;
             case 1:
                 setFiles({
                     url: 'pics/project02.jpg',
-                    title: '날씨 기반 정보 제공 반응형 웹페이지',
+                    title: '날씨 기반 정보 제공 반응형 웹 페이지',
                     author: '팀 프로젝트',
                     link: 'https://github.com/hxunpkk/teamproject_boksabon',
                     stacks: 'HTML / CSS / JS / JQuery',
-                    desc: '',
+                    desc: '날씨를 통한 정보 제공 팀프로젝트 웹 페이지',
                     vlink: 'videos/video2.mp4',
                 })
                 break;
             case 2:
                 setFiles({
                     url: 'pics/project03.jpg',
-                    title: '리그오브레전드 전적검색 웹페이지(JHIN.GG)',
+                    title: '리그오브레전드 전적검색 웹 페이지(JHIN.GG)',
                     author: '개인 프로젝트',
                     link: 'https://github.com/hxunpkk/Jhin.gg',
                     stacks: 'Vue / Vuetify / Firebase',
-                    desc: '',
+                    desc: '리그오브레전드 솔로랭크 전적검색 / 랭킹 웹 페이지',
                     vlink: 'videos/video3.mp4',
                 })
                 break;
@@ -200,7 +200,7 @@ const Project = () => {
                             </div>
                         </div>
                         <p className='info_subtitle'>Description</p>
-                        <p>프로젝트설명 블라블라블라</p>
+                        <p>{files.desc}</p>
                     </div>
                 </div>
                 <div className='board_r'>
