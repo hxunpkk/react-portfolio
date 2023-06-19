@@ -21,7 +21,7 @@ const ProjectBlock = styled.div`
         border-radius: 0 5px 0 5px;
         box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
         position: relative;
-        @media ${props=>props.theme.mobile}{
+        @media ${props=>props.theme.tabletS}{
             padding: 0 10px;
             margin: auto;
         }
@@ -29,13 +29,19 @@ const ProjectBlock = styled.div`
             width: 10%;
             @media ${props=>props.theme.tabletL}{
                 width: 15%;
+            }
+            @media ${props=>props.theme.mobile}{
+                width: 5%;
             } 
         }
         .board_r {
             width: 10%;
             @media ${props=>props.theme.tabletL}{
                 width: 15%;
-            } 
+            }
+            @media ${props=>props.theme.mobile}{
+                width: 5%;
+            }  
         }
         .board_c {
             width: 80%;
@@ -47,7 +53,11 @@ const ProjectBlock = styled.div`
             letter-spacing: 3px;
             @media ${props=>props.theme.tabletL}{
                 width: 70%;
-            } 
+            }
+            @media ${props=>props.theme.mobile}{
+                width: 90%;
+                padding: 30px;
+            }  
             .info_subtitle {
                 letter-spacing: 0;
                 font-size: 14px;
@@ -71,9 +81,19 @@ const ProjectBlock = styled.div`
                 }
                 .depth2 {
                     display: flex;
+                    flex-wrap: wrap;
                     div {
                         width: 33.33%;
                         height: 100%;
+                        @media ${props=>props.theme.tabletS}{
+                            width: 100%;
+                            height: 33.33%;
+                        }
+                        p {
+                            @media ${props=>props.theme.tabletS}{
+                                margin: 5px 0;
+                            }
+                        }
                     }
                 }
                 transition: all 1s;
@@ -180,6 +200,9 @@ const Project = () => {
                                   objectFit: 'cover',
                                 }}
                                 />}
+                            style={{
+                                boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)'
+                              }}
                          />
                     </div>
                     <div className='info_box'>
@@ -199,8 +222,8 @@ const Project = () => {
                                 <p>{files.stacks}</p>
                             </div>
                         </div>
-                        <p className='info_subtitle'>Description</p>
-                        <p>{files.desc}</p>
+                        <p className='info_subtitle desc'>Description</p>
+                        <p className='desc'>{files.desc}</p>
                     </div>
                 </div>
                 <div className='board_r'>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Aos from 'aos';
 
 const AboutBlock = styled.div`
-    background: #111;
+    background: #fff;
     height: 100%;
     display: flex;
     .article {
@@ -19,7 +19,7 @@ const AboutBlock = styled.div`
         box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
         @media ${props=>props.theme.mobile}{
             flex-direction: column;
-            padding: 0 10px;
+            padding: 5px 10px 0px 10px;
             margin: auto;
         }
 
