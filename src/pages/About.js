@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Aos from 'aos';
 
 const AboutBlock = styled.div`
-    background: #fff;
+    background: #EEE;
     height: 100%;
     display: flex;
     .article {

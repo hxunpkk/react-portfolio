@@ -10,10 +10,21 @@ const SkillsBlock = styled.div`
     flex-direction: column;
     justify-content: center;
     color: white;
+    position: relative;
     .skills__title {
         margin: 40px 20%;
         height: 20%;
         h1 {
+            background-color: rgb(200, 75, 49);
+            color: #000;
+            width: 95px;
+            &::after {
+                content: "Skills";
+                position: absolute;
+                color: #fff;
+                top: -0.3rem;
+                left: -0.3rem;
+            }
             @media ${props=>props.theme.mobile}{
                 margin: 0;
             }
