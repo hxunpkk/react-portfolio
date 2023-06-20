@@ -112,6 +112,10 @@ const Skills = () => {
         Aos.init({
             duration:500,
             once: true,
+            disable: function() {
+                var maxWidth = 768;
+                return window.innerWidth < maxWidth;
+            }
         })
     })
 
@@ -130,6 +134,8 @@ const Skills = () => {
                     <img src="https://img.shields.io/badge/Vuetify-1867C0?style=flat&logo=Vuetify&logoColor=white" alt='vuetify'/>
                     <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white" alt='react'/>
                     <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=Figma&logoColor=white" alt='figma'/>
+                    <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=Node.js&logoColor=white" alt='nodeJs'/>
+                    <img src="https://img.shields.io/badge/styled-components-DB7093?style=flat&logo=styled-components&logoColor=white" alt='styledComponent'/>
                 </div>
             </div>
             <div className='skills__desc'>

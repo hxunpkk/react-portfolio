@@ -97,6 +97,11 @@ const ProjectBlock = styled.div`
                     }
                 }
                 transition: all 1s;
+                .desc {
+                    @media ${props=>props.theme.mobile}{
+                        display: none;
+                    }
+                }
             }
             .hover_text {
                 font-size: 16px;
