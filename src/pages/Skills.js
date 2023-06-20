@@ -35,7 +35,7 @@ const SkillsBlock = styled.div`
             height: 15%;
         }
         @media ${props=>props.theme.mobile}{
-            margin: 0 5px;
+            margin: 0 5px 20px 5px;
             height: 12%;
         }
         .skills__title__text {
@@ -136,7 +136,6 @@ const Skills = () => {
                     <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white" alt='react'/>
                     <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=Figma&logoColor=white" alt='figma'/>
                     <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=Node.js&logoColor=white" alt='nodeJs'/>
-                    <img src="https://img.shields.io/badge/styled-components-DB7093?style=flat&logo=styled-components&logoColor=white" alt='styledComponent'/>
                 </div>
             </div>
             <div className='skills__desc'>
