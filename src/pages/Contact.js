@@ -128,13 +128,13 @@ const Contact = () => {
                 </div>
                 <div className='links'>
                     <div className='links__button'>
-                        <a href='mailto:dlgur73@gmail.com' className='email' target='_blank' rel="noreferrer"></a>
+                        <a href='mailto:dlgur73@gmail.com' className='email' target='_blank' rel="noreferrer"> </a>
                     </div>
                     <div className='links__button'>
-                        <a href='https://github.com/hxunpkk' className='github' target='_blank' rel="noreferrer"></a>
+                        <a href='https://github.com/hxunpkk' className='github' target='_blank' rel="noreferrer"> </a>
                     </div>
                     <div className='links__button'>
-                        <a href='https://velog.io/@hxunpkk' className='velog' target='_blank' rel="noreferrer"></a>
+                        <a href='https://velog.io/@hxunpkk' className='velog' target='_blank' rel="noreferrer"> </a>
                     </div>
                 </div>
             </div>
