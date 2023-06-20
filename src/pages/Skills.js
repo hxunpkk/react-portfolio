@@ -35,7 +35,7 @@ const SkillsBlock = styled.div`
             height: 15%;
         }
         @media ${props=>props.theme.mobile}{
-            margin: 0 5px 20px 5px;
+            margin: 0 5px;
             height: 12%;
         }
         .skills__title__text {
