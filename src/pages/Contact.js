@@ -52,6 +52,10 @@ const ContactBlock = styled.div`
                 height: 10rem;
                 border-radius: 50%;
                 object-fit: cover;
+                @media ${props=>props.theme.mobile}{
+                    width: 8rem;
+                    height: 8rem;
+                }
             }
         }
         .links {
