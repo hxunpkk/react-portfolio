@@ -81,7 +81,7 @@ const MainBlock = styled.div`
         font-size: 24px;
         animation: bounce 0.5s linear infinite;
         @media ${props=>props.theme.tabletS}{
-            left: 48%;
+            animation: none;
         }
     }
 

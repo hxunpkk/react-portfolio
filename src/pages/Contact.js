@@ -19,7 +19,12 @@ const ContactBlock = styled.div`
         padding: 2rem;
         margin: 1rem;
         color: white;
+        border-radius: 5px;
         boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)';
+        @media ${props=>props.theme.tabletS}{
+            width: 50%;
+            flex-direction: column;
+        }
         .title {
             transform: rotate(-10deg);
             position: absolute;
@@ -34,6 +39,9 @@ const ContactBlock = styled.div`
         .avatar {
             flex: 1;
             padding: 3rem;
+            @media ${props=>props.theme.mobile}{
+                padding: 1rem 3rem;
+            }
             img {
                 width: 10rem;
                 height: 10rem;
@@ -44,6 +52,9 @@ const ContactBlock = styled.div`
         .links {
             padding: 3rem;
             flex: 1;
+            @media ${props=>props.theme.mobile}{
+                padding: 1rem 3rem;
+            }
             .links__button {
                 position: relative;
                 width: 12rem;
@@ -109,6 +120,12 @@ const ContactBlock = styled.div`
         color: #31313C;
         span {
             color: white;
+        }
+        @media ${props=>props.theme.tabletS}{
+            left: 0;
+        }
+        @media ${props=>props.theme.mobile}{
+            font-size: 16px;
         }
     }
     a {
