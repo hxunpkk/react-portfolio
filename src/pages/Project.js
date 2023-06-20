@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState, useRef} from 'react';
 import styled from 'styled-components';
 import Arrowleft from '../components/Arrowleft';
 import Arrowright from '../components/Arrowright';
@@ -66,7 +66,28 @@ const ProjectBlock = styled.div`
             }
             div {
                 width: 100%;
-                height: 50%;
+                height: 47.5%;
+            }
+            .dots {
+                height: 5%;
+                list-style: none;
+                text-align: center;
+                margin: 0;
+                padding-left: 0;
+                li {
+                    margin: 0 5px;
+                    display:inline-block;
+                    border: none;
+                    background: #fff;
+                    width: 15px;
+                    height: 15px;
+                    color: #fff;
+                    border-radius: 50px;
+                    transition: all 1s;
+                    &.on {
+                        width: 35px;
+                    }
+                }
             }
             .img_box {
                 margin: 20px auto;
@@ -76,6 +97,7 @@ const ProjectBlock = styled.div`
             }
             .info_box {
                 text-align: left;
+                transition: all 1s;
                 h2 {
                     font-weight: normal;
                 }
@@ -96,7 +118,6 @@ const ProjectBlock = styled.div`
                         }
                     }
                 }
-                transition: all 1s;
                 .desc {
                     @media ${props=>props.theme.mobile}{
                         display: none;
@@ -131,7 +152,7 @@ const ProjectBlock = styled.div`
 `
 
 const Project = () => {
-    const {count} = useContext(AirContext)
+    const {count} = useContext(AirContext);
     const [files, setFiles] = useState({
         url: '',
         title: '',
@@ -139,10 +160,13 @@ const Project = () => {
         link: '',
         stacks: '',
         desc: ''
-    })
+    });
+    const dot1 = useRef(null);
+    const dot2 = useRef(null);
+    const dot3 = useRef(null);
+    
     
     useEffect(() => {
-        console.log(count)
         switch(count){
             case 0:
                 setFiles({
@@ -154,6 +178,9 @@ const Project = () => {
                     desc: '반응형 디자인 웹 페이지 사이트',
                     vlink: 'videos/video1.mp4',
                 })
+                dot1.current.classList.add('on');
+                dot2.current.classList.remove('on');
+                dot3.current.classList.remove('on');
                 break;
             case 1:
                 setFiles({
@@ -165,6 +192,9 @@ const Project = () => {
                     desc: '날씨를 통한 정보 제공 팀프로젝트 웹 페이지',
                     vlink: 'videos/video2.mp4',
                 })
+                dot1.current.classList.remove('on');
+                dot2.current.classList.add('on');
+                dot3.current.classList.remove('on');
                 break;
             case 2:
                 setFiles({
@@ -176,6 +206,9 @@ const Project = () => {
                     desc: '리그오브레전드 솔로랭크 전적검색 / 랭킹 웹 페이지',
                     vlink: 'videos/video3.mp4',
                 })
+                dot1.current.classList.remove('on');
+                dot2.current.classList.remove('on');
+                dot3.current.classList.add('on');
                 break;
             default:
                 break;
@@ -189,6 +222,11 @@ const Project = () => {
                     <Arrowleft />
                 </div>
                 <div className='board_c'>
+                    <ul className='dots'>
+                        <li ref={dot1} className='on'></li>
+                        <li ref={dot2}></li>
+                        <li ref={dot3}></li>
+                    </ul>
                     <div className='img_box'>
                         <div className='hover_text'>사진에 커서를 올려보세요</div>
                         <HoverVideoPlayer 
