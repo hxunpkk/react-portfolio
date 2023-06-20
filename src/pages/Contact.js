@@ -23,6 +23,7 @@ const ContactBlock = styled.div`
         boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)';
         @media ${props=>props.theme.tabletS}{
             width: 50%;
+            padding: 1rem 2rem;
             flex-direction: column;
         }
         .title {
@@ -35,12 +36,15 @@ const ContactBlock = styled.div`
             padding: 0.5rem 1rem;
             background: #111;
             font-size: 36px;
+            @media ${props=>props.theme.mobile}{
+                font-size: 24px;
+            }
         }
         .avatar {
             flex: 1;
             padding: 3rem;
             @media ${props=>props.theme.mobile}{
-                padding: 1rem 3rem;
+                padding: 0.5rem 3rem;
             }
             img {
                 width: 10rem;
@@ -53,7 +57,7 @@ const ContactBlock = styled.div`
             padding: 3rem;
             flex: 1;
             @media ${props=>props.theme.mobile}{
-                padding: 1rem 3rem;
+                padding: 0.5rem 3rem;
             }
             .links__button {
                 position: relative;
@@ -68,13 +72,17 @@ const ContactBlock = styled.div`
                         text-transform: uppercase;
                         transition: all 400ms;
                         top: 15px;
+                        left: 0;
                         text-align: center;
+                        width: 100%;
                     }
                     &::before {
                         position: absolute;
                         text-transform: uppercase;
                         transition: all 400ms;
                         top: 70px;
+                        left: 0;
+                        width: 100%;
                         text-align: center;
                     }
                 }
