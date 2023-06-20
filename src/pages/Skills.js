@@ -27,6 +27,7 @@ const SkillsBlock = styled.div`
             }
             @media ${props=>props.theme.mobile}{
                 margin: 0;
+                font-size: 24px;
             }
         }
         @media ${props=>props.theme.tabletS}{
