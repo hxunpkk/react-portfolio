@@ -10,6 +10,7 @@ const ContactBlock = styled.div`
     align-items: center;
     font-family: Montserrat;
     font-weight: 800;
+    flex-direction: column;
     .board {
         align-items: center;
         justify-content: center;
@@ -22,7 +23,7 @@ const ContactBlock = styled.div`
         border-radius: 5px;
         boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)';
         @media ${props=>props.theme.tabletS}{
-            width: 50%;
+            width: 60%;
             padding: 1rem 2rem;
             flex-direction: column;
         }
@@ -130,7 +131,8 @@ const ContactBlock = styled.div`
             color: white;
         }
         @media ${props=>props.theme.tabletS}{
-            left: 0;
+            position: static;
+            height: 10%;
         }
         @media ${props=>props.theme.mobile}{
             font-size: 16px;
