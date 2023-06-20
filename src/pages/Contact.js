@@ -51,7 +51,6 @@ const ContactBlock = styled.div`
                 width: 10rem;
                 height: 10rem;
                 border-radius: 50%;
-                object-fit: cover;
                 @media ${props=>props.theme.mobile}{
                     width: 8rem;
                     height: 8rem;
@@ -154,7 +153,7 @@ const Contact = () => {
                 <div className='title'>Contact Me?</div>
                 <div className='photo'>
                     <div className='avatar'>
-                        <img src='pics/profile.svg' alt='profile' />
+                        <img src='pics/profile.jpg' alt='profile' />
                     </div>
                 </div>
                 <div className='links'>
