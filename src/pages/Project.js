@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import HoverVideoPlayer from 'react-hover-video-player';
 
 const ProjectBlock = styled.div`
-    background: #3F72AF;
+    background: #F07B3F;
     height: 100%;
     display: flex;
     .board {
@@ -151,6 +151,25 @@ const ProjectBlock = styled.div`
 
 `
 
+function useWindowSize() {
+    const [windowSize, setWindowSize] = useState({
+      width: undefined,
+      height: undefined,
+    });
+    useEffect(() => {
+      function handleResize() {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+      window.addEventListener("resize", handleResize);
+      handleResize();
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+    return windowSize;
+}
+
 const Project = () => {
     const {count} = useContext(AirContext);
     const [files, setFiles] = useState({
@@ -161,6 +180,7 @@ const Project = () => {
         stacks: '',
         desc: ''
     });
+    const size = useWindowSize();
     const dot1 = useRef(null);
     const dot2 = useRef(null);
     const dot3 = useRef(null);
@@ -229,7 +249,9 @@ const Project = () => {
                     </ul>
                     <div className='img_box'>
                         <div className='hover_text'>사진에 커서를 올려보세요</div>
-                        <HoverVideoPlayer 
+                        {
+                            size.width > 1024 ? (
+                                <HoverVideoPlayer 
                             videoSrc={files.vlink}
                             restartOnPaused
                             loadingStateTimeout = { 1000 } 
@@ -247,6 +269,18 @@ const Project = () => {
                                 boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)'
                               }}
                          />
+                            ) : (
+                                <img
+                                src={files.url}
+                                alt="banner"
+                                style={{
+                                  width: '100%',
+                                  height: '100%',
+                                  objectFit: 'cover',
+                                }}
+                                /> 
+                            )
+                        }
                     </div>
                     <div className='info_box'>
                         <p className='info_subtitle'>Project Title</p>

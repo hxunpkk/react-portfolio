@@ -4,7 +4,7 @@ import Aos from 'aos';
 import Arrowbottom from '../components/Arrowbottom';
 
 const ThirdTitleBlock = styled.div`
-    background: #3F72AF;
+    background: #F07B3F;
     height: 100%;
     display: flex;
     position: relative;
