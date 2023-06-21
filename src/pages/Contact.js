@@ -170,7 +170,7 @@ const Contact = () => {
             </div>
             <div className='footer'>
                 <p>Developed by <span>Park Hyunwoo</span></p>
-                <p>Last Update : <span>2023. 06. 20</span></p>
+                <p>Last Update : <span>2023. 06. 21</span></p>
             </div>
         </ContactBlock>
     );
