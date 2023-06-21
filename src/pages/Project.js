@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import HoverVideoPlayer from 'react-hover-video-player';
 
 const ProjectBlock = styled.div`
-    background: #F07B3F;
+    background: #111;
     height: 100%;
     display: flex;
     .board {
@@ -130,7 +130,7 @@ const ProjectBlock = styled.div`
                 top: 0;
                 right: 100%;
                 writing-mode: vertical-lr;
-                background: #232020;
+                background: #F05B3F;
                 width: 50px;
                 height: 250px;
                 text-align: center;
