@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Aos from 'aos';
 
 const SkillsBlock = styled.div`
-    background: #111;
+    background: #393232;
     height: 100%;
     display: flex;
     text-align: center;
@@ -15,7 +15,7 @@ const SkillsBlock = styled.div`
         margin: 40px 20%;
         height: 20%;
         h1 {
-            background-color: rgb(200, 75, 49);
+            background-color: #ED8D8D;
             color: #000;
             width: 95px;
             &::after {
@@ -64,13 +64,14 @@ const SkillsBlock = styled.div`
         }
         .skills__desc__article {
             width: 40%;
-            border: 0.2rem solid rgb(190, 150, 0);
+            border: 0.2rem solid #ED8D8D;
             border-radius: 2rem;
             text-align: left;
             position: relative;
             padding: 1rem;
             margin: 1rem;
             padding-bottom: 0;
+            background: #4D4545;
             @media ${props=>props.theme.tabletS}{
                 font-size: 14px;
                 width: 80%;
@@ -87,9 +88,9 @@ const SkillsBlock = styled.div`
                 position: absolute;
                 left: -1.5rem;
                 top: -1.5rem;
-                border: 0.2rem solid rgb(238, 238, 238);
+                border: 0.2rem solid #ED8D8D;
                 padding: 0.5rem 1rem;
-                background: #111;
+                background: #393232;
             }
             .content {
                 font-family: Jua;

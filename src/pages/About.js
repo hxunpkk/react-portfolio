@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import Aos from 'aos';
 
 const AboutBlock = styled.div`
-    background: #EEE;
+    background: #222831;
     height: 100%;
     display: flex;
     .article {
         flex: 1;
-        background: #31313C;
+        background: #393E46;
         justify-content: center;
         align-items: center;
         padding: 60px;

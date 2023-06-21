@@ -6,6 +6,9 @@ import About from './About';
 import Project from './Project';
 import Contact from './Contact';
 import Skills from './Skills';
+import FirstTitle from './FirstTitle';
+import SecondTitle from './SecondTitle';
+import ThirdTitle from './ThirdTitle';
 import "aos/dist/aos.css";
 
 const HomeSectionBlock = styled.div`
@@ -13,7 +16,11 @@ const HomeSectionBlock = styled.div`
   .slide-navigation {
     display: none;
   }
-  /*.slide-navigation button:nth-child(1) {
+  /*.slide-navigation button:nth-child(2) {
+    display: none;
+  }
+
+  .slide-navigation button:nth-child(1) {
     display: none;
   }
   
@@ -34,10 +41,9 @@ const HomeSectionBlock = styled.div`
   
   .slide-navigation {
     position: fixed;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    bottom: 0px;
+    float: left;
+    bottom: 50%;
+    z-index:99999;
   }
   
   .slide-navigation button:disabled {
@@ -55,10 +61,19 @@ const Home = () => {
                     <Main />
                 </Slide>
                 <Slide>
+                    <FirstTitle />
+                </Slide>
+                <Slide>
                     <About />
                 </Slide>
                 <Slide>
+                    <SecondTitle />
+                </Slide>
+                <Slide>
                     <Skills />
+                </Slide>
+                <Slide>
+                    <ThirdTitle />
                 </Slide>
                 <Slide>
                     <Project />

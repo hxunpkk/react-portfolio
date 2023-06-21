@@ -1,7 +1,7 @@
 import Aos from 'aos';
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const MainBlock = styled.div`
@@ -39,7 +39,7 @@ const MainBlock = styled.div`
                 font-size: 32px;
             }
             &::after{
-                border-right: 3px solid yellow;
+                border-right: 3px solid #FFD369;
                 content: '';
                 animation: typing 0.7s linear infinite;
             }
@@ -66,7 +66,7 @@ const MainBlock = styled.div`
                     margin: 5px 0 0;
                     transition: all 0.2s ease-in-out;
                     transition-duration: 0.3s;
-                    background-color: yellow;
+                    background-color: #FFD369;
                     animation: lineFade 0.7s 2.8s linear forwards; 
                 }
             }
