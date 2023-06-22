@@ -184,6 +184,7 @@ const Project = () => {
     const dot1 = useRef(null);
     const dot2 = useRef(null);
     const dot3 = useRef(null);
+    const dot4 = useRef(null);
     
     
     useEffect(() => {
@@ -201,6 +202,7 @@ const Project = () => {
                 dot1.current.classList.add('on');
                 dot2.current.classList.remove('on');
                 dot3.current.classList.remove('on');
+                dot4.current.classList.remove('on');
                 break;
             case 1:
                 setFiles({
@@ -215,6 +217,7 @@ const Project = () => {
                 dot1.current.classList.remove('on');
                 dot2.current.classList.add('on');
                 dot3.current.classList.remove('on');
+                dot4.current.classList.remove('on');
                 break;
             case 2:
                 setFiles({
@@ -229,6 +232,22 @@ const Project = () => {
                 dot1.current.classList.remove('on');
                 dot2.current.classList.remove('on');
                 dot3.current.classList.add('on');
+                dot4.current.classList.remove('on');
+                break;
+            case 3:
+                setFiles({
+                    url: 'pics/project04.png',
+                    title: '자기소개 포트폴리오 웹사이트(Now)',
+                    author: '개인 프로젝트',
+                    link: 'https://github.com/hxunpkk/react-portfolio',
+                    stacks: 'React',
+                    desc: '자기 소개 / 프로젝트 소개 포트폴리오 웹 사이트',
+                    vlink: 'videos/video4.mp4',
+                })
+                dot1.current.classList.remove('on');
+                dot2.current.classList.remove('on');
+                dot3.current.classList.remove('on');
+                dot4.current.classList.add('on');
                 break;
             default:
                 break;
@@ -246,6 +265,7 @@ const Project = () => {
                         <li ref={dot1} className='on'></li>
                         <li ref={dot2}></li>
                         <li ref={dot3}></li>
+                        <li ref={dot4}></li>
                     </ul>
                     <div className='img_box'>
                         <div className='hover_text'>사진에 커서를 올려보세요</div>
@@ -261,7 +281,7 @@ const Project = () => {
                                 alt="banner"
                                 style={{
                                   width: '100%',
-                                  height: '100%',
+                                  height: '100.1%',
                                   objectFit: 'cover',
                                 }}
                                 />}

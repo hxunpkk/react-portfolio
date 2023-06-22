@@ -65,7 +65,7 @@ const Arrowleft = () => {
 
     const onDecrease = () => {
         if(count === 0) {
-          setCount(2)
+          setCount(3)
         } else {
           setCount(count - 1)
         }

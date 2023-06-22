@@ -68,8 +68,17 @@ const ContactBlock = styled.div`
                 width: 12rem;
                 border: 0.2rem solid rgb(238, 238, 238); 
                 padding: 1.5rem 1.2rem;
-                margin: 0.5rem;
+                margin: 1rem 0.5rem;
                 overflow: hidden;
+                transition: all 0.5s;
+                box-shadow: 
+                    0.3em 0.3em 0 0 white;
+                &:hover,
+                &:focus {
+                    box-shadow: 
+                        0 0 0 0 white,
+                        inset 6em 3.5em 0 0 white;
+                    }
                 a {
                     &::after {
                         position: absolute;
@@ -81,6 +90,7 @@ const ContactBlock = styled.div`
                         width: 100%;
                     }
                     &::before {
+                        color: black;
                         position: absolute;
                         text-transform: uppercase;
                         transition: all 400ms;
@@ -170,7 +180,7 @@ const Contact = () => {
             </div>
             <div className='footer'>
                 <p>Developed by <span>Park Hyunwoo</span></p>
-                <p>Last Update : <span>2023. 06. 21</span></p>
+                <p>Last Update : <span>2023. 06. 22</span></p>
             </div>
         </ContactBlock>
     );

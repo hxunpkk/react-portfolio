@@ -66,7 +66,7 @@ const Arrowright = () => {
   const {count, setCount} = useContext(AirContext)
 
   const onIncrease = () => {
-    if(count === 2) {
+    if(count === 3) {
       setCount(0)
     } else {
       setCount(count + 1)
